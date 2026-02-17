@@ -1,0 +1,58 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clipify - Turn Long Videos Into Shorts</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-950 text-white font-sans">  <!-- Hero Section -->  <section class="min-h-screen flex flex-col items-center justify-center text-center px-6">
+    <h1 class="text-5xl md:text-6xl font-bold mb-6">Turn Long Videos Into Viral Shorts</h1>
+    <p class="text-lg md:text-xl text-gray-400 max-w-2xl mb-8">
+      Upload your long video and instantly create 30s–1min clips ready for YouTube Shorts, TikTok, and Reels.
+    </p>
+    <button onclick="document.getElementById('uploadSection').scrollIntoView({behavior: 'smooth'})" 
+      class="bg-white text-black px-8 py-3 rounded-2xl text-lg font-semibold hover:bg-gray-200 transition">
+      Get Started
+    </button>
+  </section>  <!-- Upload Section -->  <section id="uploadSection" class="py-20 bg-gray-900 px-6">
+    <div class="max-w-3xl mx-auto bg-gray-800 p-10 rounded-2xl shadow-2xl text-center">
+      <h2 class="text-3xl font-bold mb-6">Upload Your Video</h2>
+      <input type="file" accept="video/*" 
+        class="w-full mb-6 p-3 rounded-xl bg-gray-700 text-white" /><select class="w-full mb-6 p-3 rounded-xl bg-gray-700 text-white">
+    <option value="30">30 Seconds</option>
+    <option value="60">1 Minute</option>
+  </select>
+
+  <button onclick="generateClips()" 
+    class="bg-green-500 px-8 py-3 rounded-2xl text-lg font-semibold hover:bg-green-400 transition">
+    Generate Clips
+  </button>
+
+  <div id="result" class="mt-8 text-green-400 font-semibold"></div>
+</div>
+
+  </section>  <!-- Features Section -->  <section class="py-20 px-6 text-center">
+    <h2 class="text-3xl font-bold mb-12">Why Use Clipify?</h2>
+    <div class="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+      <div class="bg-gray-800 p-8 rounded-2xl">
+        <h3 class="text-xl font-semibold mb-4">AI Highlight Detection</h3>
+        <p class="text-gray-400">Automatically finds the most engaging parts of your video.</p>
+      </div>
+      <div class="bg-gray-800 p-8 rounded-2xl">
+        <h3 class="text-xl font-semibold mb-4">Auto Captions</h3>
+        <p class="text-gray-400">Adds stylish captions optimized for social media platforms.</p>
+      </div>
+      <div class="bg-gray-800 p-8 rounded-2xl">
+        <h3 class="text-xl font-semibold mb-4">Vertical Formatting</h3>
+        <p class="text-gray-400">Formats clips perfectly for mobile viewing.</p>
+      </div>
+    </div>
+  </section>  <!-- Footer -->  <footer class="py-8 text-center text-gray-500 border-t border-gray-800">
+    © 2026 Clipify. All rights reserved.
+  </footer>  <script>
+    function generateClips() {
+      const result = document.getElementById('result');
+      result.innerText = "Processing your video... Clips will be ready shortly.";
+    }
+  </script></body>
+</html>
